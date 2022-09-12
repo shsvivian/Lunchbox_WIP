@@ -14,7 +14,7 @@ import dao.LoginDao;
 import model.LoginBean;
 
 
-@WebServlet("/dashboard")
+@WebServlet("/")
 public class DashboardController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private LoginDao loginDao;

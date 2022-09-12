@@ -2,36 +2,33 @@ package model;
 
 import java.time.LocalDate;
 
-public class Todo {
+public class Order {
 
 	private Long id;
-	private String title;
-	private String username;
+	private String name;
+	private Double price;
 	private String description;
 	private LocalDate targetDate;
-	private boolean status;
 	
-	protected Todo() {
+	protected Order() {
 		
 	}
 	
-	public Todo(long id, String title, String username, String description, LocalDate targetDate, boolean isDone) {
+	public Order(long id, String name, Double price, String description, LocalDate targetDate) {
 		super();
 		this.id = id;
-		this.title = title;
-		this.username = username;
+		this.name = name;
+		this.price = price;
 		this.description = description;
 		this.targetDate = targetDate;
-		this.status = isDone;
 	}
 
-	public Todo(String title, String username, String description, LocalDate targetDate, boolean isDone) {
+	public Order(String name, Double price, String description, LocalDate targetDate) {
 		super();
-		this.title = title;
-		this.username = username;
+		this.name = name;
+		this.price = price;
 		this.description = description;
 		this.targetDate = targetDate;
-		this.status = isDone;
 	}
 	
 	public Long getId() {
@@ -42,20 +39,20 @@ public class Todo {
 		this.id = id;
 	}
 
-	public String getTitle() {
-		return title;
+	public String getName() {
+		return name;
 	}
 	
-	public void setTitle(String title) {
-		this.title = title;
+	public void setName(String name) {
+		this.name = name;
 	}
 	
-	public String getUsername() {
-		return username;
+	public Double getPrice() {
+		return price;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setPrice(Double price) {
+		this.price = price;
 	}
 
 	public String getDescription() {
@@ -74,13 +71,6 @@ public class Todo {
 		this.targetDate = targetDate;
 	}
 
-	public boolean getStatus() {
-		return status;
-	}
-
-	public void setStatus(boolean status) {
-		this.status = status;
-	}
 
 	@Override
 	public int hashCode() {
@@ -98,7 +88,7 @@ public class Todo {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Todo other = (Todo) obj;
+		Order other = (Order) obj;
 		if (id != other.id)
 			return false;
 		return true;

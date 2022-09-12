@@ -1,14 +1,18 @@
-# Todo Application
-Todo application developed using JSP, Servlet, JDBC and MySQL Database.
+# Lunchbox Ordering System (LOS)
+To resolve the question about “what to eat and where to go for lunch” among the office ladies and gentlemen in their working days after the post-pandemic era, we have come up with an idea to ease the decision-making process.
 
-## Following features
-- Add todo
-- Edit todo
-- List Dodo
-- Delete Todo
+## Core Pages/Features
+Customer Portal
+- Dashboard
+- Shopping Cart
+- Order Confirmation
+- Order Summary
+- Order History
+
+Admin Portal
 - Login
-- Signup
-- Responsive layout
+- Menu Management
+- Record Management
 
 ## Technology stack
 - Java 8+
@@ -18,7 +22,5 @@ Todo application developed using JSP, Servlet, JDBC and MySQL Database.
 - Eclipse IDE
 - Tomcat server 8+
 
-## Blog post to develop this project from scratch
-
-Refer blog tutorial at 
-<a href="https://www.javaguides.net/2019/10/build-todo-app-using-jsp-servlet-jdbc-and-mysql.html"> Build Todo App using JSP, Servlet, JDBC and MySQL</a>
+## Launch Steps
+1. ...
