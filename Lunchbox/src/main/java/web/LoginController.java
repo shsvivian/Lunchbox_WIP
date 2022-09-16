@@ -42,8 +42,7 @@ public class LoginController extends HttpServlet {
 
 		try {
 			if (loginDao.validate(loginBean)) {
-				RequestDispatcher dispatcher = request.getRequestDispatcher("dish/dish-list.jsp");
-				dispatcher.forward(request, response);
+				response.sendRedirect("dish/list");
 			} else {
 				HttpSession session = request.getSession();
 				session.setAttribute("user", username);

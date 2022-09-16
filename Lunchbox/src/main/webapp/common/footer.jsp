@@ -14,7 +14,7 @@
 <footer class="footer font-small black">
 	<!-- Copyright -->
 	<div class="footer-copyright text-center py-3" style="color: white">
-		© 2019 -
+		© 2022 -
 		<%=new java.text.SimpleDateFormat("yyyy").format(new java.util.Date())%>
 		Copyright: <strong> Lunchbox </strong>
 	</div>

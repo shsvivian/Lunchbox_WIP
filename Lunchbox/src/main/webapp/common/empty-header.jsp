@@ -1,14 +1,18 @@
 <style>
-.header {
+.header-nav {
 	margin-bottom: 16px;
 }
 </style>
 
-<header>
-	<nav class="header navbar navbar-expand-md navbar-dark"
+<header class="header-nav">
+	<nav class="navbar navbar-expand-lg navbar-dark"
 		style="background-color: DarkOrange">
-		<div>
-			<a href="<%=request.getContextPath()%>" class="navbar-brand">Lunchbox</a>
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#"> <img
+				src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg"
+				alt="Logo" width="30" height="24"
+				class="d-inline-block align-text-top"> Lunchbox
+			</a>
 		</div>
 	</nav>
 </header>

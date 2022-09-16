@@ -1,17 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<!DOCTYPE html>
 <html>
-
-<head>
 <jsp:include page="../common/title.jsp"></jsp:include>
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-	crossorigin="anonymous">
-</head>
 
-</head>
 <body>
 	<jsp:include page="../common/admin-header.jsp"></jsp:include>
 	<div class="container col-md-5">
@@ -36,36 +30,38 @@
 				</caption>
 
 				<c:if test="${dish != null}">
-					<input type="hidden" name="id" value="<c:out value='${dish.dishId}' />" />
+					<input type="hidden" name="dishId"
+						value="<c:out value='${dish.dishId}' />" />
 				</c:if>
 
-				<fieldset class="form-group">
-					<label>Dish Title</label> <input type="text"
-						value="<c:out value='${todo.title}' />" class="form-control"
-						name="title" required="required" minlength="5">
+				<fieldset class="mb-3">
+					<label>Name</label> <input type="text"
+						value="<c:out value='${dish.name}' />" class="form-control"
+						name="name" required="required" />
 				</fieldset>
 
-				<fieldset class="form-group">
-					<label>Todo Decription</label> <input type="text"
-						value="<c:out value='${todo.description}' />" class="form-control"
-						name="description" minlength="5">
+				<fieldset class="mb-3">
+					<label>Price</label> <input type="number" step=".01"
+						value="<c:out value='${dish.price}' />" class="form-control"
+						name="price" required="required">
 				</fieldset>
 
-				<fieldset class="form-group">
-					<label>Todo Status</label> <select class="form-control"
-						name="isDone">
-						<option value="false">In Progress</option>
-						<option value="true">Complete</option>
-					</select>
+				<fieldset class="mb-3">
+					<label>Description</label>
+					<textarea class="form-control" name="description" rows="3"><c:out
+							value='${dish.description}' /></textarea>
 				</fieldset>
 
-				<fieldset class="form-group">
-					<label>Todo Target Date</label> <input type="date"
-						value="<c:out value='${todo.targetDate}' />" class="form-control"
-						name="targetDate" required="required">
+				<fieldset class="mb-3">
+					<label>Picture</label> <input type="text"
+						value="<c:out value='${dish.picture}' />" class="form-control"
+						name="picture" required="required">
 				</fieldset>
 
-				<button type="submit" class="btn btn-success">Save</button>
+				<div class="mb-3 d-grid d-md-flex justify-content-md-end">
+					<a href="list" class="btn btn-secondary me-md-2">Back</a>
+					<button type="submit" class="btn btn-success">Save</button>
+				</div>
 				</form>
 			</div>
 		</div>
@@ -73,4 +69,5 @@
 
 	<jsp:include page="../common/footer.jsp"></jsp:include>
 </body>
+
 </html>

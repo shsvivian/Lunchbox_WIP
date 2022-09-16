@@ -1,25 +1,38 @@
 <style>
-.header {
+.header-nav {
 	margin-bottom: 16px;
 }
 </style>
 
-<header>
-	<nav class="header navbar navbar-expand-md navbar-dark"
+<header class="header-nav">
+	<nav class="navbar navbar-expand-lg navbar-dark"
 		style="background-color: DarkOrange">
-		<div>
-			<a href="<%=request.getContextPath()%>" class="navbar-brand">Lunchbox</a>
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#"> <img
+				src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg"
+				alt="Logo" width="30" height="24"
+				class="d-inline-block align-text-top"> Lunchbox
+			</a>
+			<button class="navbar-toggler p-0 border-0" type="button"
+				id="navbarSideCollapse" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="navbar-collapse offcanvas-collapse"
+				id="navbarsExampleDefault">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="nav-link"
+						href="<%=request.getContextPath()%>/dish/list">Dish</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Order</a></li>
+				</ul>
+				<div class="d-flex">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item"><a class="nav-link"
+							href="<%=request.getContextPath()%>">Logout</a></li>
+					</ul>
+				</div>
+			</div>
 		</div>
-
-		<ul class="navbar-nav">
-			<li><a href="<%=request.getContextPath()%>/dish" class="nav-link">Dish</a></li>
-			<li><a href="<%=request.getContextPath()%>/dish" class="nav-link">Menu</a></li>
-			<li><a href="<%=request.getContextPath()%>/dish" class="nav-link">Order</a></li>
-		</ul>
-
-		<ul class="navbar-nav navbar-collapse justify-content-end">
-			<li><a href="<%=request.getContextPath()%>/dashboard"
-				class="nav-link">Logout</a></li>
-		</ul>
 	</nav>
 </header>
