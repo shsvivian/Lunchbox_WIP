@@ -8,8 +8,8 @@
 <body>
 	<jsp:include page="../common/header.jsp"></jsp:include>
 	<div class="container col-md-8 col-md-offset-3" style="overflow: auto">
-		<h1>Dashboard</h1>
-		<p>This is Dashboard page</p>
+		<h1>Shopping Cart</h1>
+		<p>This is Shopping Cart</p>
 	</div>
 	<jsp:include page="../common/footer.jsp"></jsp:include>
 </body>

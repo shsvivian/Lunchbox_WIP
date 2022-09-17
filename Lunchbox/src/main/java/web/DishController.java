@@ -67,12 +67,12 @@ public class DishController extends HttpServlet {
 		List<Dish> dishList = dishDAO.selectAllDishes();
 
 		request.setAttribute("dishList", dishList);
-		request.getRequestDispatcher("dish-list.jsp").forward(request, response);
+		request.getRequestDispatcher("list.jsp").forward(request, response);
 	}
 
 	private void showNewForm(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.getRequestDispatcher("dish-form.jsp").forward(request, response);
+		request.getRequestDispatcher("form.jsp").forward(request, response);
 	}
 
 	private void showEditForm(HttpServletRequest request, HttpServletResponse response)
@@ -81,7 +81,7 @@ public class DishController extends HttpServlet {
 		Dish dish = dishDAO.selectDish(dishId);
 
 		request.setAttribute("dish", dish);
-		request.getRequestDispatcher("dish-form.jsp").forward(request, response);
+		request.getRequestDispatcher("form.jsp").forward(request, response);
 	}
 
 	private void insertDish(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
